@@ -1,0 +1,49 @@
+/* Hero pequeño */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light);
+  min-height: 85vh;
+}
+.hero--small {
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/proyectos.jpeg") center/cover no-repeat;
+}
+.hero__title {
+  font-size: var(--font-size-title);
+  margin-bottom: 1rem;
+}
+
+/* Galería de proyectos */
+.gallery {
+  padding: var(--spacing-section) var(--spacing-element);
+}
+
+.gallery__title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-element);
+}
+
+.gallery__item {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.gallery__item:hover {
+  transform: scale(1.2);
+}
+section div img {
+  width: 150px;
+  height: 200px;
+}

@@ -1,0 +1,125 @@
+/* Hero pequeño */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light);
+  min-height: 85vh;
+}
+.hero--small {
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/contactos.jpg") center/cover no-repeat;
+}
+.hero__title {
+  font-size: var(--font-size-title);
+  margin-bottom: 1rem;
+}
+/* Contactos */
+.contact {
+  width: 100%;
+  padding: var(--spacing-section) var(--spacing-element);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-section);
+  color: var(--color-primary);
+}
+.contact__text {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  line-height: 25px;
+}
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-element);
+}
+
+.contact__info {
+  background: var(--color-light);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact__socials {
+  margin-top: 15px;
+}
+
+.contact__social {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 15px;
+  background: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.contact__social:hover {
+  background: var(--color-secondary);
+}
+
+/* Formulario */
+.form__group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.form__group input,
+.form__group select,
+.form__group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form__group input:focus,
+.form__group select:focus,
+.form__group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-light);
+  transition: background 0.3s;
+}
+
+.btn--primary:hover {
+  background: var(--color-secondary);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}

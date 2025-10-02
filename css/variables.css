@@ -1,0 +1,20 @@
+:root {
+  /* Colores principales */
+  --color-primary: #071739; /* Azul */
+  --color-secondary: #f59e0b; /* Amarillo */
+  --color-light: #ffffff;
+  --color-dark: #111827;
+  --color-gray: #4b6382;
+
+  /* Tipografía */
+  --font-main: "Roboto", sans-serif;
+  --font-size-base: 16px;
+  --font-size-title: 2.5rem;
+
+  /* Espaciado */
+  --spacing-section: 4rem;
+  --spacing-element: 1.5rem;
+
+  /* Bordes */
+  --radius: 0.5rem;
+}

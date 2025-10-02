@@ -1,0 +1,103 @@
+/* Hero pequeño */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light);
+  min-height: 85vh;
+}
+.hero--small {
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/servicios.jpg") center/cover no-repeat;
+}
+.hero__title {
+  font-size: var(--font-size-title);
+  margin-bottom: 1rem;
+}
+
+/* Servicios */
+.services {
+  padding: var(--spacing-section) var(--spacing-element);
+}
+.services__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-section);
+  color: var(--color-primary);
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-element);
+}
+
+.card {
+  width: 350px;
+  height: 250px;
+  perspective: 1000px; /* da efecto 3D */
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-title {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--color-light);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+/* cuando se activa la clase "flipped" gira */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* oculta la cara trasera */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  text-align: center;
+}
+.card-back {
+  padding: 0 15px;
+}
+
+.card-front {
+  background: #fff;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transform: rotateY(180deg);
+}
